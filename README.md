@@ -4,7 +4,7 @@ This project involves developing a deep learning-based system that generates tex
 
 ## Demo
 
-![Demo Image](images/demoImg.png)
+![Demo Image](demoImg.png)
 
 ## Key Components:
 
