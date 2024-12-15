@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Captioning</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Image Captioning App</h1>
+    
+    <!-- File Upload Form -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg,.jpeg,.png">
+        <input type="submit" value="Upload and Generate Caption">
+    </form>
+
+    <!-- Display uploaded image and caption if available -->
+    {% if filename %}
+    <div>
+        <h2>Uploaded Image</h2>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" style="max-width: 500px;">
+        
+        <h2>Generated Caption</h2>
+        <p>{{ caption }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
